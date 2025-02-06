@@ -1,1 +1,31 @@
+using System;
 
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Por favor, insira uma palavra: ");
+        string palavra = Console.ReadLine();
+
+
+        if (!string.IsNullOrEmpty(palavra))
+        {
+            
+            Console.WriteLine("As letras da palavra são:");
+            foreach (char letra in palavra)
+            {
+                Console.WriteLine(letra);
+            }
+        }
+        else
+        {
+
+            Console.WriteLine("Você não inseriu uma palavra válida.");
+        }
+
+
+			Console.Write("Press any key to continue . . . "); 
+			Console.ReadKey(true);
+		}
+	}
