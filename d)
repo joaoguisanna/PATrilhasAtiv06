@@ -1,1 +1,33 @@
+using System;
 
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Por favor, insira um número inteiro positivo: ");
+        int numero;
+        
+
+        while (!int.TryParse(Console.ReadLine(), out numero) || numero <= 0)
+        {
+            Console.Write("Entrada inválida! Por favor, insira um número inteiro positivo: ");
+        }
+
+
+        int soma = 0;
+
+
+        for (int i = 1; i <= numero; i++)
+        {
+            soma += i;
+        }
+
+
+        Console.WriteLine($"A soma de todos os números entre 1 e {numero} é: {soma}");
+
+
+			Console.Write("Press any key to continue . . . "); 
+			Console.ReadKey(true);
+		}
+	}
