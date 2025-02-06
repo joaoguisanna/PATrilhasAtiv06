@@ -1,1 +1,49 @@
+using System;
 
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Por favor, insira um número inteiro: ");
+        int numero;
+        
+
+        while (!int.TryParse(Console.ReadLine(), out numero))
+        {
+            Console.Write("Entrada inválida! Por favor, insira um número inteiro: ");
+        }
+
+
+        if (numero <= 1)
+        {
+            Console.WriteLine("{numero} não é um número primo.");
+        }
+        else
+        {
+            bool isPrimo = true;
+            for (int i = 2; i <= Math.Sqrt(numero); i++)
+            {
+                if (numero % i == 0)
+                {
+                    isPrimo = false;
+                    break;
+                }
+            }
+
+
+            if (isPrimo)
+            {
+                Console.WriteLine(" é um número primo.");
+            }
+            else
+            {
+                Console.WriteLine("não é um número primo.");
+            }
+        }
+
+
+			Console.Write("Press any key to continue . . . "); 
+			Console.ReadKey(true);
+		}
+	}
